@@ -1,0 +1,22 @@
+<div class="title">
+    <h1>Ver cliente</h1>
+</div>
+
+<div *ngIf="cliente !=null" class="container">
+    <mat-card class="card">
+        <mat-card-title>{{ cliente.nombreCompleto }}</mat-card-title>
+        <mat-card-content>
+            <p><strong>Identificacion: {{cliente.identificacion}}</strong></p>
+            <p><strong>Edad: </strong> {{cliente.edad}} Años</p>
+            <p><strong>Genero: </strong> {{cliente.genero}} </p>
+            <p><strong>Estado: </strong> <mat-icon aria-hidden="false"[fontIcon]="cliente.estado === true ? 'search' : 'not_interested' ">{{ cliente.estado === true ? 'check_circle' : 'not_interested' }}</mat-icon> </p>
+            <p><strong>Maneja: </strong> {{cliente.maneja}} </p>
+            <p><strong>Lentes: </strong> {{cliente.lentes}} </p>
+            <p><strong>Diabetico: </strong> {{cliente.diabetico}}</p>
+            <p><strong>Otra: </strong>{{cliente.otraEnfermedad}} </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button routerLink="listClientes" mat-raised-button>Volver</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
