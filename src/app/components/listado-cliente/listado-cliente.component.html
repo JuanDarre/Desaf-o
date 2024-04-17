@@ -32,27 +32,39 @@
           </ng-container>
 
           <ng-container matColumnDef="estado">
-            <th mat-header-cell *matHeaderCellDef> estado </th>
-            <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+            <th mat-header-cell *matHeaderCellDef> Estado </th>
+            <td mat-cell *matCellDef="let element">
+              <span *ngIf="element.estado" class="activo">Activo</span>
+              <span *ngIf="!element.estado" class="inactivo">Inactivo</span>
+            </td>
           </ng-container>
-
+          
           <ng-container matColumnDef="maneja">
-            <th mat-header-cell *matHeaderCellDef> maneja </th>
-            <td mat-cell *matCellDef="let element"> {{element.maneja}} </td>
+            <th mat-header-cell *matHeaderCellDef> Maneja </th>
+            <td mat-cell *matCellDef="let element">
+              <span *ngIf="element.maneja" class="activo">Sí</span>
+              <span *ngIf="!element.maneja" class="inactivo">No</span>
+            </td>
           </ng-container>
 
           <ng-container matColumnDef="lentes">
-            <th mat-header-cell *matHeaderCellDef> lentes </th>
-            <td mat-cell *matCellDef="let element"> {{element.lentes}} </td>
+            <th mat-header-cell *matHeaderCellDef> Usa lentes </th>
+            <td mat-cell *matCellDef="let element">
+              <span *ngIf="element.lentes" class="activo">Sí</span>
+              <span *ngIf="!element.lentes" class="inactivo">No</span>
+            </td>
           </ng-container>
 
           <ng-container matColumnDef="diabetico">
-            <th mat-header-cell *matHeaderCellDef> diabetico </th>
-            <td mat-cell *matCellDef="let element"> {{element.diabetico}} </td>
+            <th mat-header-cell *matHeaderCellDef> Diabetes </th>
+            <td mat-cell *matCellDef="let element">
+              <span *ngIf="element.diabetico" class="activo">Sí</span>
+              <span *ngIf="!element.diabetico" class="inactivo">No</span>
+            </td>
           </ng-container>
 
           <ng-container matColumnDef="otra">
-            <th mat-header-cell *matHeaderCellDef> otra </th>
+            <th mat-header-cell *matHeaderCellDef> Otra enfermedad </th>
             <td mat-cell *matCellDef="let element"> {{element.otraEnfermedad}} </td>
           </ng-container>
 
